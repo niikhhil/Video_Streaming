@@ -13,4 +13,9 @@ app.get("/", (req, res) => {
     res.send(`DB connected`);
 });
 
+
+// importing routes
+import userRouter from "./routes/userRoutes.js";
+
+app.use('/api/v1/users', userRouter)
 export default app;
